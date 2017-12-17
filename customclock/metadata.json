@@ -1,0 +1,31 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "ajmeese7@gmail.com",
+                "Name": "Aaron Meese"
+            }
+        ],
+        "Category": "Date and Time",
+        "Dependencies": [
+        ],
+        "Description": "A customizable clock with hands",
+        "EnabledByDefault": true,
+        "Icon": "preferences-system-time",
+        "Id": "org.kde.plasma.customclock",
+        "License": "GPL-2.0+",
+        "Name": "Customizable Clock",
+        "ServiceTypes": [
+            "Plasma/Applet"
+        ],
+        "Version": "1.0",
+        "Website": "https://github.com/ajmeese7/clock"
+    },
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-MainScript": "ui/analogclock.qml",
+    "X-Plasma-Provides": [
+        "org.kde.plasma.time",
+        "org.kde.plasma.date"
+    ],
+    "X-Plasma-StandAloneApp": true
+}

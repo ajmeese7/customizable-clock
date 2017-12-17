@@ -1,2 +1,8 @@
-# customizable-clock
-KDE Plasma 5 customizable clock widget
+# clock-widget
+
+This is my fork of the analog clock widget in KDE Plasma 5. I was disappointed with the lack of customizability in the clock settings, so I made my own.
+
+### Install
+Change your directory to wherever you downloaded the repository and run:
+`plasmapkg2 --install customclock`
+then the widget should appear in your widgets sidebar.
