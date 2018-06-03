@@ -23,11 +23,17 @@ Item {
     width: childrenRect.width
     height: childrenRect.height
 
+    property alias cfg_showMinuteHand: showMinuteHandCheckBox.checked
     property alias cfg_showSecondHand: showSecondHandCheckBox.checked
     property alias cfg_showTimezoneString: showTimezoneCheckBox.checked
 
     Column {
         anchors.left: parent.left
+        // This addition isn't working
+        QtControls.CheckBox {
+            id: showMinuteHandCheckBox
+            text: i18n("Show minutes hand")
+        }
         QtControls.CheckBox {
             id: showSecondHandCheckBox
             text: i18n("Show seconds hand")

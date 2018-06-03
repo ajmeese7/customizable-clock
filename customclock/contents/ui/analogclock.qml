@@ -35,6 +35,8 @@ Item {
     property int hours
     property int minutes
     property int seconds
+    // Where is plasmoid.configuration actually pointing? Is showMinuteHand accessible / how to check?
+    property bool showMinutesHand: plasmoid.configuration.showMinuteHand
     property bool showSecondsHand: plasmoid.configuration.showSecondHand
     property bool showTimezone: plasmoid.configuration.showTimezoneString
     property int tzOffset
@@ -61,8 +63,7 @@ Item {
         }
     }
 
-    function dateTimeChanged()
-    {
+    function dateTimeChanged() {
         var currentTZOffset = dataSource.data["Local"]["Offset"] / 60;
         if (currentTZOffset != tzOffset) {
             tzOffset = currentTZOffset;
@@ -86,6 +87,7 @@ Item {
         }
 
 
+        // TODO: Where is this path pointing to? It is modified by the themes, so check how that works
         PlasmaCore.Svg {
             id: clockSvg
             imagePath: "widgets/clock"
@@ -108,6 +110,7 @@ Item {
                 elementId: "ClockFace"
             }
 
+            // Somehow, the code from here to...
             Hand {
                 anchors.topMargin: 3
                 elementId: "HourHandShdow"
@@ -125,13 +128,16 @@ Item {
                 anchors.topMargin: 3
                 elementId: "MinuteHandShadow"
                 rotation: 180 + minutes * 6
+                visible: showMinutesHand
                 svgScale: face.width / face.naturalSize.width
             }
             Hand {
                 elementId: "MinuteHand"
                 rotation: 180 + minutes * 6
+                visible: showMinutesHand
                 svgScale: face.width / face.naturalSize.width
             }
+            // ... here doesn't affect the widget at all. Modifications currently not working
 
             Hand {
                 anchors.topMargin: 3

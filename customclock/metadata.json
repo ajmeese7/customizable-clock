@@ -19,7 +19,7 @@
             "Plasma/Applet"
         ],
         "Version": "1.0",
-        "Website": "https://github.com/ajmeese7/clock"
+        "Website": "https://github.com/ajmeese7/customizable-clock"
     },
     "X-Plasma-API": "declarativeappletscript",
     "X-Plasma-MainScript": "ui/analogclock.qml",

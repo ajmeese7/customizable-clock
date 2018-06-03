@@ -6,8 +6,11 @@
   <kcfgfile name=""/>
 
   <group name="General">
+    <entry name="showMinuteHand" type="Bool">
+      <default>false</default>
+    </entry>
     <entry name="showSecondHand" type="Bool">
-      <default>true</default>
+      <default>false</default>
     </entry>
     <entry name="showTimezoneString" type="Bool">
       <default>false</default>

@@ -1,0 +1,3 @@
+- Make it so the user's settings for colors (after implemented) aren't overridden by the system (requires replacing SVG w/ rect)
+- Do the same style mod to the fuzzy clock
+    - Check KDE clock widgets to see if something similar already exists?

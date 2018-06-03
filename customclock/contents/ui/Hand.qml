@@ -23,6 +23,7 @@ import QtQuick 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
+// IDEA: Constantly updating and moving, not just on the second?
 PlasmaCore.SvgItem {
     id: secondHand
 
